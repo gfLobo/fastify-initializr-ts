@@ -1,0 +1,27 @@
+{
+  "name": "app_name",
+  "version": "1.0.0",
+  "description": "app_description",
+  "type": "commonjs",
+  "main": "index.ts",
+  "author": "app_author",
+  "license": "app_license",
+  "keywords": [],
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "fastify": "^5.8.5",
+    "zod": "^4.3.6",
+    "@fastify/swagger": "^9.7.0",
+    "@fastify/swagger-ui": "^5.2.5",
+    "fastify-type-provider-zod": "^6.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "tsx": "^4.21.0",
+    "@types/node": "^25.6.2"
+  }
+}

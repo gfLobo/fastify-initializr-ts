@@ -1,0 +1,33 @@
+{
+  "name": "fastify-initializr-ts",
+  "version": "1.0.0",
+  "description": "A Fastify + TypeScript + Swagger API",
+  "keywords": [
+    "Fastify",
+    "Typescript",
+    "Swagger",
+    "API"
+  ],
+  "bin": {
+    "fastify-initializr-ts": "./bin/index.js"
+  },
+  "homepage": "https://github.com/gfLobo/fastify-initializr-ts#readme",
+  "bugs": {
+    "url": "https://github.com/gfLobo/fastify-initializr-ts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gfLobo/fastify-initializr-ts.git"
+  },
+  "license": "MIT",
+  "author": "gfLobo",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.3.0",
+    "picocolors": "^1.1.1"
+  }
+}
