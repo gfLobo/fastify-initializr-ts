@@ -41,4 +41,4 @@ MIT
 
 
 
-_Created with `fastify-initialzr-ts`_
+_Created with `fastify-initializr-ts`_
