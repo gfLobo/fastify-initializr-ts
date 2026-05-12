@@ -5,8 +5,6 @@ Minimal boilerplate with Fastify + TypeScript + Swagger
 ## Setup
 
 ```bash
-git clone <repository_url>
-cd fastify-ts
 npm install
 ```
 
