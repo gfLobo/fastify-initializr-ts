@@ -31,14 +31,40 @@ npx fastify-initializr-ts
 * [TSX](https://tsx.is/) — TypeScript execution environment powered by esbuild.
 * [@types/node](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node) — Type definitions for Node.js.
 
----
-
-## 📜 License
-
-This project is licensed under the MIT License.
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Feel free to open issues or submit pull requests.
+Contributions are welcome! Feel free to open issues and submit pull requests.
+
+#### Branches
+
+```text
+feature/<issue-id>
+```
+
+
+#### Commits
+
+```text
+<type>(<issue-id>): <description>
+```
+
+
+#### Types
+
+- `feat` — new feature  
+- `fix` — bug fix  
+- `docs` — documentation  
+- `refactor` — code refactor  
+- `test` — tests  
+- `chore` — maintenance  
+- `ci` — CI/CD changes
+
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
