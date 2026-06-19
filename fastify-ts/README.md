@@ -1,6 +1,6 @@
 # fastify-ts
 
-Minimal boilerplate with Fastify + TypeScript + Swagger
+Minimal boilerplate with Fastify + TypeScript + Swaggerapp_db_stack_tagline
 
 ## Setup
 
@@ -31,8 +31,8 @@ npm start
 * Fastify
 * TypeScript
 * Zod
-* Swagger
-
+* Swaggerapp_db_stack_item
+app_db_section
 ## License
 
 MIT
