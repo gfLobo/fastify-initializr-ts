@@ -33,9 +33,6 @@ npm start
 * Zod
 * Swaggerapp_db_stack_item
 app_db_section
-## License
-
-MIT
 
 
 
