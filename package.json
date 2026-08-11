@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/gfLobo/fastify-initializr-ts.git"
   },
-  "license": "MIT",
+  "license": "GPL-3.0",
   "author": "gfLobo",
   "type": "commonjs",
   "main": "index.js",
