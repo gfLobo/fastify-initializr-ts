@@ -3,7 +3,7 @@ import swagger from "@fastify/swagger";
 import swaggerUI from "@fastify/swagger-ui";
 import { jsonSchemaTransform } from "fastify-type-provider-zod";
 
-export default fp(async (app) => {
+export default fp(async (app:any) => {
   await app.register(swagger, {
     openapi: {
       info: {
