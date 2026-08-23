@@ -1,7 +1,6 @@
 # fastify-initializr-ts
 
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Version](https://img.shields.io/badge/version-1.0.0-informational)
 
 A modern **Fastify** boilerplate built with **TypeScript** and integrated **Swagger documentation** for fast and scalable API development — with optional **Prisma** database setup.
 
@@ -9,6 +8,12 @@ A modern **Fastify** boilerplate built with **TypeScript** and integrated **Swag
 
 ## 🛠️ Installation
 
+Install globally:
+```bash
+npm install -g fastify-initializr-ts
+```
+
+Then run:
 ```bash
 npx fastify-initializr-ts
 ```
