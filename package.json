@@ -1,6 +1,6 @@
 {
   "name": "fastify-initializr-ts",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A Fastify + TypeScript + Swagger API",
   "keywords": [
     "Fastify",
