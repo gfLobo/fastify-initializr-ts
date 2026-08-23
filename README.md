@@ -1,6 +1,7 @@
 # fastify-initializr-ts
 
 ![License](https://img.shields.io/badge/license-MIT-green)
+![Version](https://img.shields.io/npm/v/fastify-initializr-ts)
 
 A modern **Fastify** boilerplate built with **TypeScript** and integrated **Swagger documentation** for fast and scalable API development — with optional **Prisma** database setup.
 
