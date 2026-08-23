@@ -1,6 +1,7 @@
 export type DbProviderKey =
   | "postgresql"
   | "mysql"
+  | "planetscale"
   | "sqlite"
   | "mongodb"
   | "sqlserver"
