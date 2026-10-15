@@ -1,3 +1,4 @@
+import fs from "node:fs";
 import path from "node:path";
 import { copyFolderSync, removePathSync } from "../utils/fs";
 import { stripPrismaFromPackageJson } from "../utils/package-json";
@@ -27,5 +28,25 @@ export function scaffoldProject(
   removePathSync(path.join(targetDir, "lib"));
   removePathSync(path.join(targetDir, "prisma"));
   removePathSync(path.join(targetDir, "prisma.config.ts"));
+  stripDatabaseVarsFromEnv(targetDir);
   stripPrismaFromPackageJson(targetDir);
+}
+
+
+/**
+ * Sem banco configurado, remove DATABASE_URL / DIRECT_URL do `.env`
+ * para não deixar placeholders (ex.: "app_db_url") no projeto gerado.
+ */
+function stripDatabaseVarsFromEnv(targetDir: string): void {
+  const envPath = path.join(targetDir, ".env");
+  if (!fs.existsSync(envPath)) return;
+
+  const content = fs
+    .readFileSync(envPath, "utf8")
+    .split(/\r?\n/)
+    .filter((line) => !/^(DATABASE_URL|DIRECT_URL)=/.test(line))
+    .join("\n")
+    .replace(/^\s+/, "");
+
+  fs.writeFileSync(envPath, content, "utf8");
 }

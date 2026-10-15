@@ -1,0 +1,12 @@
+DATABASE_URL="app_db_url"
+DIRECT_URL="app_db_direct_url"
+
+# TIMEOUTS
+connectionTimeout=120_000
+requestTimeout=60_000
+keepAliveTimeout=10_000
+headersTimeout=15_000
+
+# RATE LIMITING
+rateLimitWindow=60
+rateLimitMax=100

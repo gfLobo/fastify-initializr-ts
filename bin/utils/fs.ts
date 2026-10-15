@@ -5,6 +5,16 @@ import type { TemplateVars } from "../types";
 const TEXT_FILE_PATTERN = /\.(json|js|ts|env|md|txt|yaml|yml|prisma)$/i;
 
 /**
+ * O npm nunca publica `.env` / `.gitignore` (e respeita o .gitignore do
+ * repositório ao montar o pacote). Por isso o template guarda esses
+ * arquivos com nomes "seguros" e eles são renomeados ao copiar.
+ */
+const TEMPLATE_FILE_RENAMES: Record<string, string> = {
+  _env: ".env",
+  _gitignore: ".gitignore",
+};
+
+/**
  * Copia recursivamente uma pasta de template para um destino,
  * substituindo placeholders (chaves de `vars`) em arquivos de texto.
  */
@@ -21,7 +31,8 @@ export function copyFolderSync(
 
   for (const entry of entries) {
     const srcPath = path.join(src, entry.name);
-    const destPath = path.join(dest, entry.name);
+    const destName = TEMPLATE_FILE_RENAMES[entry.name] ?? entry.name;
+    const destPath = path.join(dest, destName);
 
     if (entry.isDirectory()) {
       copyFolderSync(srcPath, destPath, vars);
@@ -29,7 +40,8 @@ export function copyFolderSync(
     }
 
     const fileBuffer = fs.readFileSync(srcPath);
-    const isTextFile = TEXT_FILE_PATTERN.test(entry.name);
+    const isTextFile =
+      TEXT_FILE_PATTERN.test(destName) || destName === ".env";
 
     if (isTextFile) {
       let content = fileBuffer.toString("utf8");

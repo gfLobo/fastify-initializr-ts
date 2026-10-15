@@ -1,6 +1,6 @@
 {
   "name": "fastify-initializr-ts",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A Fastify + TypeScript + Swagger API",
   "keywords": [
     "Fastify",
@@ -11,6 +11,11 @@
   "bin": {
     "fastify-initializr-ts": "./dist/index.js"
   },
+  "files": [
+    "dist",
+    "fastify-ts",
+    "!fastify-ts/package-lock.json"
+  ],
   "homepage": "https://github.com/gfLobo/fastify-initializr-ts#readme",
   "bugs": {
     "url": "https://github.com/gfLobo/fastify-initializr-ts/issues"
