@@ -17,6 +17,7 @@ import { promptDatabaseConfig } from "./prompts/database.prompt";
 import { buildTemplateVars } from "./core/template-vars";
 import { scaffoldProject } from "./core/scaffold";
 import { installProjectDependencies } from "./core/install";
+import { initGitRepositoryWithFeedback } from "./core/git";
 import {
   printServerRunningOutro,
   printNextStepsOutro,
@@ -52,6 +53,8 @@ async function main(): Promise<void> {
   }
 
   await installProjectDependencies(targetDir, databaseConfig);
+
+  await initGitRepositoryWithFeedback(targetDir);
 
   const devSpinner = p.spinner();
   devSpinner.start("Starting development server");

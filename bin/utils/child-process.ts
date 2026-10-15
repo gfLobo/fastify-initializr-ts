@@ -59,3 +59,21 @@ function runCommand(
     child.on("error", reject);
   });
 }
+
+/**
+ * Executa um comando sem imprimir a saída e devolve o código de saída.
+ * Nunca rejeita: se o binário não existir (ENOENT), devolve -1.
+ * Útil para checagens ("git está instalado?") e comandos silenciosos.
+ */
+export function runQuiet(
+  command: string,
+  args: string[],
+  cwd: string
+): Promise<number> {
+  return new Promise((resolve) => {
+    const child = spawn(command, args, { cwd, stdio: "ignore" });
+
+    child.on("close", (code) => resolve(code ?? -1));
+    child.on("error", () => resolve(-1));
+  });
+}
