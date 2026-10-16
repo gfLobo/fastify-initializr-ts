@@ -1,11 +1,13 @@
 # fastify-initializr-ts
 
-![License](https://img.shields.io/badge/license-MIT-green)
+![GitHub License](https://img.shields.io/github/license/gfLobo/fastify-initializr-ts)
 ![Version](https://img.shields.io/npm/v/fastify-initializr-ts)
+[![Architecture diagram](https://gitdiagram.com/diagram-badge.svg)](https://gitdiagram.com/gflobo/fastify-initializr-ts?utm_source=readme&utm_medium=badge)
 
 A modern **Fastify** boilerplate built with **TypeScript** and integrated **Swagger documentation** for fast and scalable API development — with optional **Prisma** database setup.
 
----
+[![Architecture diagram of gflobo/fastify-initializr-ts](https://gitdiagram.com/gflobo/fastify-initializr-ts/diagram.png)](https://gitdiagram.com/gflobo/fastify-initializr-ts?utm_source=readme&utm_medium=picture)
+
 
 ## 🛠️ Installation
 
@@ -19,7 +21,7 @@ Then run:
 npx fastify-initializr-ts
 ```
 
----
+
 
 ## ⚙️ Database setup (optional)
 
@@ -34,9 +36,12 @@ During setup, you'll be asked whether you want to configure a database with Pris
 
 Based on your choice, the CLI configures the right Prisma adapter, connection strings, and generates `lib/prisma.ts` accordingly. If you skip this step, the `lib`, `prisma` folders and `prisma.config.ts` are removed, and Prisma-related dependencies are stripped from `package.json`.
 
----
+
 
 ## 📦 Dependencies & Documentation
+
+<img width="11022" height="7175" alt="diagram" src="https://github.com/user-attachments/assets/845b1bec-573e-4096-8276-dd0f04cbd1f2" />
+
 
 ### Runtime dependencies
 
@@ -55,7 +60,7 @@ Based on your choice, the CLI configures the right Prisma adapter, connection st
 * [@types/node](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node) — Type definitions for Node.js.
 * [Prisma CLI](https://www.prisma.io/docs/orm/tools/prisma-cli) *(optional)* — Schema management, migrations, and client generation, included when a database is configured.
 
----
+
 
 ## 🤝 Contributing
 
@@ -86,7 +91,7 @@ feature/<issue-id>
 - `ci` — CI/CD changes
 
 
----
+
 
 ## 📜 License
 
